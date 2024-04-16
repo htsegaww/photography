@@ -9,7 +9,8 @@ const Logo = () => {
   return (
     <Link href="/">
       <Image
-        src={`${theme === "light" ? `/logo.png` : `/logo-black.png`}`}
+        // src={`${theme === "light" ? `/logo.png` : `/logo-black.png`}`}
+        src={"/logo-black.png"}
         alt="logo"
         width={55}
         height={55}
