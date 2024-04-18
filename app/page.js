@@ -1,5 +1,6 @@
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
+// import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
 import Newsletter from "@/components/Newsletter";
@@ -16,6 +17,7 @@ export default function Home() {
       <Reviews />
       <Faq />
       <Newsletter />
+      {/* <Footer /> */}
     </main>
   );
 }
