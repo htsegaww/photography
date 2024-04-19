@@ -2,6 +2,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+// toaster
+import { Toaster } from "@/components/ui/toaster";
+
 //theme provider
 import { ThemeProvider } from "@/components/ThemeProvider";
 
@@ -20,6 +23,7 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <Footer />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
