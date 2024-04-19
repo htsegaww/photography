@@ -36,7 +36,7 @@ const infoData = [
 ];
 const About = () => {
   return (
-    <section className=" pb-12 xl:py-24 ">
+    <section className=" pb-12 xl:py-24 min-h-screen ">
       <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
           About Me

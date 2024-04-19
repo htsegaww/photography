@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 
 const projectData = [
   {
-    image: "/work/1.png",
+    image: "/gallery/1.png",
     category: "Portraits",
     name: "Feb 11, 2024",
     description:
@@ -13,7 +13,7 @@ const projectData = [
     codePen: "/",
   },
   {
-    image: "/work/2.png",
+    image: "/gallery/2.png",
     category: "models",
     name: "Feb 11, 2024",
     description:
@@ -23,7 +23,7 @@ const projectData = [
     codePen: "/",
   },
   {
-    image: "/work/3.png",
+    image: "/gallery/3.png",
 
     category: "Places",
     name: "Feb 11, 2024",
@@ -34,7 +34,7 @@ const projectData = [
     codePen: "/",
   },
   {
-    image: "/work/4.png",
+    image: "/gallery/4.png",
 
     category: "Corporate",
     name: "Feb 11, 2024",
@@ -44,7 +44,7 @@ const projectData = [
     codePen: "/",
   },
   {
-    image: "/work/5.png",
+    image: "/gallery/5.png",
 
     category: "fashion",
     name: "Feb 11, 2024",
@@ -55,7 +55,7 @@ const projectData = [
     codePen: "/",
   },
   {
-    image: "/work/6.png",
+    image: "/gallery/6.png",
 
     category: "places",
     name: "Feb 11, 2024",
@@ -65,7 +65,7 @@ const projectData = [
     codePen: "/",
   },
   {
-    image: "/work/7.png",
+    image: "/gallery/7.png",
 
     category: "Corporate",
     name: "Feb 11, 2024",
@@ -75,7 +75,7 @@ const projectData = [
     codePen: "/",
   },
   {
-    image: "/work/8.png",
+    image: "/gallery/8.png",
 
     category: "fashion",
     name: "Feb 11, 2024",
@@ -85,7 +85,7 @@ const projectData = [
     codePen: "/",
   },
   {
-    image: "/work/9.png",
+    image: "/gallery/9.png",
 
     category: "models",
     name: "Feb 11, 2024",
@@ -95,7 +95,7 @@ const projectData = [
     codePen: "/",
   },
   {
-    image: "/work/10.png",
+    image: "/gallery/10.png",
 
     category: "portraits",
     name: "Feb 11, 2024",
@@ -105,7 +105,7 @@ const projectData = [
     codePen: "/",
   },
   {
-    image: "/work/11.png",
+    image: "/gallery/11.png",
 
     category: "models",
     name: "Feb 11, 2024",

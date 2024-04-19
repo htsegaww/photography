@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardHeader } from "./ui/card";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
-import { Group, Link2Icon } from "lucide-react";
+import { GroupIcon, Link2Icon } from "lucide-react";
 import Link from "next/link";
 const ProjectCard = ({ project }) => {
   return (
@@ -19,18 +19,18 @@ const ProjectCard = ({ project }) => {
           />
 
           {/* link button */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 ">
             <Link
               href={project.link}
-              className="bg-secondary w-[55px] h-[55px] flex justify-center items-center rounded-full scale-0 opacity-0 group-hover:scale-100 group:opacity-50 duration-200 transition-all"
+              className="bg-secondary w-[55px] h-[55px] flex justify-center items-center rounded-full scale-0 opacity-0 group-hover:opacity-50 group-hover:scale-100 group:opacity-50 duration-200 transition-all"
             >
               <Link2Icon />
             </Link>
             <Link
               href={project.link}
-              className="bg-secondary w-[55px] h-[55px] flex justify-center items-center rounded-full scale-0 opacity-0 group-hover:scale-100 group:opacity-50 duration-200 transition-all"
+              className="bg-secondary w-[55px] h-[55px] flex justify-center items-center rounded-full scale-0 opacity-0 group-hover:opacity-50 group-hover:scale-100 group:opacity-50 duration-200 transition-all"
             >
-              <Group />
+              <GroupIcon />
             </Link>
           </div>
         </div>
