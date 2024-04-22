@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
@@ -19,35 +20,48 @@ const Hero = () => {
         <div className="flex justify-between gap-x-8">
           {/*  left side of the content */}
           <div className="flex max-w-[800px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
-            <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
-              Photography
-            </div>
-            <h1 className="h1 uppercase">Let&apos;s make magic!</h1>
-            <p className="subtitle max-w-[590px] mt-4 mx-auto xl:mx-auto">
-              We are fine art, nature & portrait film photographers from San
-              Francisco, with a special love for natural light, medium format &
-              redheads with freckles.
-            </p>
-            {/* button */}
-            <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
-              <div className="flex w-full gap-x-4">
-                <label for="email-address" className="sr-only">
-                  Email Address
-                </label>
-                <Input type="email" id="email" placeholder="Email" />
-                <Link href="/contact">
-                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90 gap-x-2">
-                    Subscribe <RiMenFill size={18} />
-                  </Button>
-                </Link>
+            <div>
+              <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
+                Photography
               </div>
             </div>
 
-            {/* social icons */}
-            <Socials
-              containerStyles="flex gap-x-6 mx-auto xl:mx-0"
-              iconStyles="text-foreground text-[22px] hover:text-primary transition-all"
-            />
+            <div>
+              <h1 className="h1 uppercase">Let&apos;s make magic!</h1>
+            </div>
+
+            <div>
+              <p className="subtitle max-w-[590px] mt-4 mx-auto xl:mx-auto">
+                We are fine art, nature & portrait film photographers from San
+                Francisco, with a special love for natural light, medium format
+                & redheads with freckles.
+              </p>
+            </div>
+
+            <div>
+              {/* button */}
+              <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
+                <div className="flex w-full gap-x-4">
+                  <label for="email-address" className="sr-only">
+                    Email Address
+                  </label>
+                  <Input type="email" id="email" placeholder="Email" />
+                  <Link href="/contact">
+                    <Button className="bg-primary text-primary-foreground hover:bg-primary/90 gap-x-2">
+                      Subscribe <RiMenFill size={18} />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              {/* social icons */}
+              <Socials
+                containerStyles="flex gap-x-6 mx-auto xl:mx-0"
+                iconStyles="text-foreground text-[22px] hover:text-primary transition-all"
+              />
+            </div>
           </div>
 
           {/* banner image */}
