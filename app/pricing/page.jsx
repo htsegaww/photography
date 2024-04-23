@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { ToastAction } from "@/components/ui/toast";
 import { toast } from "@/components/ui/use-toast";
+import { motion } from "framer-motion";
 import { CheckIcon } from "lucide-react";
 import React from "react";
 
@@ -15,11 +16,21 @@ const Pricing = () => {
   return (
     <section className="min-h-screen pt-12">
       <div className="container mx-auto">
-        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 3, delay: 1 }}
+          className="section-title mb-8 xl:mb-16 text-center mx-auto"
+        >
           My pricing
-        </h2>
+        </motion.h2>
 
-        <div className="mx-auto max-w-xl sm:text-center ">
+        <motion.div
+          initial={{ x: -250 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mx-auto max-w-xl sm:text-center "
+        >
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Memories worth love cherishing
           </h2>
@@ -28,13 +39,18 @@ const Pricing = () => {
             taken in person and edited by hand, so you can be sure that every
             photo is as good as it gets.
           </p>
-        </div>
+        </motion.div>
 
         {/* pricing data */}
 
         <div className="mx-auto mt-16 max-w-2xl ring-1 ring-gray-200 rounded-3xl sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
           {/* left section */}
-          <div className="p-8 sm:p-10 lg:flex-auto">
+          <motion.div
+            initial={{ x: 250 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="p-8 sm:p-10 lg:flex-auto"
+          >
             <h3 className="text-2xl font-bold tracking-tight">
               Lifetime Membership
             </h3>
@@ -70,11 +86,16 @@ const Pricing = () => {
                 );
               })}
             </ul>
-          </div>
+          </motion.div>
 
           {/* right section */}
 
-          <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+          <motion.div
+            initial={{ x: 250 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0"
+          >
             <div className="bg-tertiary py-10 rounded-2xl text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
               <div className="mx-auto max-w-xs px-8">
                 <p className="text-base font-semibold">
@@ -108,7 +129,7 @@ const Pricing = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

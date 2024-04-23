@@ -1,14 +1,36 @@
-import React from "react";
+"use client";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const Faq = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const control = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      control.start("visible");
+      // console.log(isInView);
+    }
+  }, [control, isInView]);
   return (
-    <section>
+    <motion.section
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, y: 75 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={control}
+      transition={{ duration: 0.5, delay: 0.25 }}
+    >
       <div className="container mx-auto">
         <div className="w-full pt-12 mb-6 xl:mb-24">
           <h2 className="section-title mb-12 text-center mx-auto">
@@ -56,7 +78,7 @@ const Faq = () => {
           </AccordionItem>
         </Accordion>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

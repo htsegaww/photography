@@ -1,13 +1,35 @@
-import React from "react";
+"use client";
 import { RiMenFill } from "react-icons/ri";
 import { CalendarDaysIcon } from "lucide-react";
 import { Input } from "./ui/input";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { HandRaisedIcon } from "@heroicons/react/24/outline";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 const Newsletter = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const control = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      control.start("visible");
+      // console.log(isInView);
+    }
+  }, [control, isInView]);
   return (
-    <section>
+    <motion.section
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, y: 75 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={control}
+      transition={{ duration: 0.5, delay: 0.25 }}
+    >
       <div className="relative bg-tertiary overflow-hidden py-16 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
@@ -69,7 +91,7 @@ const Newsletter = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,4 +1,6 @@
+"use client";
 import HeroImage from "@/components/HeroImage";
+import { motion } from "framer-motion";
 import {
   RiRidingFill,
   RiSendPlaneFill,
@@ -38,23 +40,38 @@ const About = () => {
   return (
     <section className=" pb-12 xl:py-24 min-h-screen ">
       <div className="container mx-auto">
-        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="section-title mb-8 xl:mb-16 text-center mx-auto"
+        >
           About Me
-        </h2>
+        </motion.h2>
         <div className="flex flex-col xl:flex-row">
           {/* image */}
-          <div className="relative flex-1 xl:flex">
+          <motion.div
+            initial={{ x: -250 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 1, type: "tween" }}
+            className="relative flex-1 xl:flex"
+          >
             <HeroImage
               containerStyles="w-[450px] h-[450px] lg:w-[505px] lg:h-[505px] bg-no-repeat relative"
               imgSrc="/about/profile.jpg"
             />
-          </div>
+          </motion.div>
 
           <div className="flex-1">
             {/* content */}
 
             <div className="text-lg mt-12 xl:mt-3">
-              <div className="text-center xl:text-left">
+              <motion.div
+                initial={{ x: 250 }}
+                animate={{ x: 0 }}
+                transition={{ duration: 1, type: "tween" }}
+                className="text-center xl:text-left"
+              >
                 <h3 className="h3 mb-4">
                   Let&apos;s plan your perfect photoshoot
                 </h3>
@@ -81,7 +98,7 @@ const About = () => {
                     );
                   })}
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

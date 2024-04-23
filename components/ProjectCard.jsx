@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Card, CardHeader } from "./ui/card";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
 import { GroupIcon, Link2Icon } from "lucide-react";
 import Link from "next/link";
+import { useScroll, useTransform, motion } from "framer-motion";
+
 const ProjectCard = ({ project }) => {
   return (
     <Card className="group overflow-hidden relative">
@@ -13,8 +15,8 @@ const ProjectCard = ({ project }) => {
           <Image
             src={project.image}
             alt="project image"
-            width={440}
-            height={200}
+            width={740}
+            height={300}
             className="absolute top-0 shadow-2xl hover:scale-110 transition-all"
           />
 

@@ -7,6 +7,8 @@ import ThemeToggle from "./ThemeToggle";
 import Nav from "./Nav";
 import MobileNavigation from "./MobileNavigation";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+
 const Header = () => {
   const [header, setHeader] = useState(false);
   const path = usePathname();
@@ -28,7 +30,12 @@ const Header = () => {
       } sticky top-0 z-30 transition-all ${path === "/" && "bg-white"}`}
     >
       <div className="container mx-auto">
-        <div className="flex justify-between items-center">
+        <motion.div
+          initial={{ y: "-100vw" }}
+          animate={{ y: 0 }}
+          transition={{ duration: 1 }}
+          className="flex justify-between items-center"
+        >
           <Logo />
           <div className="flex items-center gap-x-6">
             {/* navigation */}
@@ -45,7 +52,7 @@ const Header = () => {
               <MobileNavigation />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </header>
   );

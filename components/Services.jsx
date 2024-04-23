@@ -1,3 +1,4 @@
+"use client";
 import { Smile, Scan, Bird } from "lucide-react";
 import {
   Card,
@@ -6,6 +7,9 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
+
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const serviceData = [
   {
@@ -28,21 +32,53 @@ const serviceData = [
   },
 ];
 const Services = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const control = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      control.start("visible");
+      // console.log(isInView);
+    }
+  }, [control, isInView]);
+
   return (
-    <section className="mb-12 xl:mb-36">
+    <motion.section
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, y: 75 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={control}
+      transition={{ duration: 0.5, delay: 0.25 }}
+      className="mb-12 xl:mb-36"
+    >
       <div className="container mx-auto">
-        <h2 className="section-title mb-6 xl:mb-24 text-center mx-auto">
+        <motion.h2
+          initial={{ x: -250 }}
+          animate={{ x: 0 }}
+          duration={{ delay: 0.9, duration: 2, type: "tween" }}
+          className="section-title mb-6 xl:mb-24 text-center mx-auto"
+        >
           Our Services
-        </h2>
+        </motion.h2>
 
         {/* category Items */}
 
-        <div className="grid xl:grid-cols-3 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          duration={{ delay: 0.9, duration: 2 }}
+          className="grid xl:grid-cols-3 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8"
+        >
           {serviceData.map((item, index) => {
             return (
               <Card
-                key="index"
-                className="relative w-full max-w-[425px] h-[450px] flex flex-col pb-10 justify-center items-center cursor-pointer hover:bg-tertiary  dark:hover:bg-white/10 transition-all duration-700"
+                key={index}
+                className="relative w-full max-w-[425px] h-[450px] flex lg:flex-col  pb-10 justify-center items-center cursor-pointer hover:bg-tertiary  dark:hover:bg-white/10 transition-all duration-700"
               >
                 <CardHeader className="text-primary">
                   <div className="w-[80px] h-[80px] bg-primary text-white  dark:text-black rounded-full flex justify-center items-center absolute -bottom-6 right-6">
@@ -58,9 +94,9 @@ const Services = () => {
               </Card>
             );
           })}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

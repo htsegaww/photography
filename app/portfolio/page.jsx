@@ -1,6 +1,7 @@
 "use client";
 import ProjectCard from "@/components/ProjectCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 const projectData = [
@@ -115,7 +116,12 @@ const Portfolio = () => {
   });
 
   return (
-    <section className="min-h-screen pt-12">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, type: "fade" }}
+      className="min-h-screen pt-12"
+    >
       <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
           My Portfolio
@@ -150,7 +156,7 @@ const Portfolio = () => {
           </div>
         </Tabs>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -6,7 +6,8 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import Image from "next/image";
-
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 const reviewsData = [
   {
     avatar: "/reviews/avatar-1.png",
@@ -45,8 +46,29 @@ const reviewsData = [
   },
 ];
 const Reviews = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const control = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      control.start("visible");
+      // console.log(isInView);
+    }
+  }, [control, isInView]);
   return (
-    <section className="mb-12 xl:mb-32">
+    <motion.section
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, y: 75 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={control}
+      transition={{ duration: 0.5, delay: 0.25 }}
+      className="mb-12 xl:mb-32"
+    >
       <div className="container mx-auto">
         <h2 className="section-title mb-12 text-center mx-auto">
           They say about our work
@@ -93,7 +115,7 @@ const Reviews = () => {
           ...
         </Swiper>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
