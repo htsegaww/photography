@@ -105,15 +105,18 @@ const Features = () => {
               return (
                 <div
                   key={feature.name}
-                  className="relative hover:scale-110 transition-all"
+                  className="relative hover:scale-110 transition-all "
                 >
-                  <dt className="text-base font-semibold leading-7 text-muted-foreground flex items-center gap-4 justify-center ">
+                  <dt className="text-base font-semibold leading-7  flex items-center gap-4 justify-center ">
                     <div className="flex flex-col w-[100px] h-[100px] bg-primary rounded-full items-center mb-4 justify-center ">
-                      <feature.icon className="h-[36px] w-[36px] aria-hidden=true" />
+                      <feature.icon
+                        className="h-[36px] w-[36px] aria-hidden=true
+                        text-white"
+                      />
                     </div>
-                    <div>{feature.name}</div>
+                    <div className="dark:text-white">{feature.name}</div>
                   </dt>
-                  <dd className="mt-2 text-base leading-7">
+                  <dd className="mt-2 text-base leading-7 dark:text-white">
                     {feature.description}
                   </dd>
                 </div>

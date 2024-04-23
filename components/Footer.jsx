@@ -24,16 +24,16 @@ const Footer = () => {
       initial="hidden"
       animate={control}
       transition={{ duration: 0.5, delay: 0.25 }}
-      className="bg-primary py-12"
+      className="bg-primary text-white py-12"
     >
       <div className="container mx-auto">
         <div className="flex flex-col items-center justify-between">
           {/* socials */}
           <Socials
             containerStyles="flex gap-x-6 mx-auto xl:mx-0 mb-4  dark:text-black"
-            iconStyles="text-white text-[20px] transition-all dark:text-black hover:text-white dark:hover:text-primary"
+            iconStyles="text-white text-[20px] transition-all hover:text-white dark:hover:text-primary"
           />
-          <div className="text-white dark:text-black">
+          <div className="text-white">
             Copyright &copy; {new Date().getFullYear()} All Rights Reserved.
           </div>
         </div>

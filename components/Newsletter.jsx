@@ -30,7 +30,7 @@ const Newsletter = () => {
       animate={control}
       transition={{ duration: 0.5, delay: 0.25 }}
     >
-      <div className="relative bg-tertiary overflow-hidden py-16 sm:py-24 lg:py-32">
+      <div className="relative bg-tertiary overflow-hidden py-16 sm:py-24 lg:py-32 text-black">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
             <div class="max-w-xl lg:max-w-lg">
@@ -50,9 +50,10 @@ const Newsletter = () => {
                   autocomplete="email"
                   required
                   placeholder="Enter your email address..."
+                  className="bg-tertiary"
                 />
                 <Link href="/contact">
-                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90 gap-x-2">
+                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90 gap-x-2 text-white">
                     Subscribe <RiMenFill size={18} />
                   </Button>
                 </Link>
@@ -62,7 +63,7 @@ const Newsletter = () => {
             <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
               <div className="flex flex-col items-start">
                 <div className="bg-primary text-white dark:text-black p-2 ring-1 ring-white/10 rounded-full">
-                  <CalendarDaysIcon className="h-6 w-6" />
+                  <CalendarDaysIcon className="h-6 w-6 text-white" />
                 </div>
                 <div className="mt-4 font-semibold text-muted-foreground">
                   Weekly articles
@@ -76,7 +77,7 @@ const Newsletter = () => {
 
               <div className="flex flex-col items-start">
                 <div className="bg-primary text-white dark:text-black p-2 ring-1 ring-white/10 rounded-full">
-                  <HandRaisedIcon className="h-6 w-6" />
+                  <HandRaisedIcon className="h-6 w-6 text-white" />
                 </div>
                 <div className="mt-4 font-semibold text-muted-foreground">
                   Full Security

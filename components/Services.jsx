@@ -78,16 +78,16 @@ const Services = () => {
             return (
               <Card
                 key={index}
-                className="relative w-full max-w-[425px] h-[450px] flex lg:flex-col  pb-10 justify-center items-center cursor-pointer hover:bg-tertiary  dark:hover:bg-white/10 transition-all duration-700"
+                className="relative w-full max-w-[425px] h-[450px] flex lg:flex-col  pb-10 justify-center items-center cursor-pointer hover:bg-tertiary  dark:hover:bg-tertiary dark:hover:text-black transition-all duration-700"
               >
                 <CardHeader className="text-primary">
-                  <div className="w-[80px] h-[80px] bg-primary text-white  dark:text-black rounded-full flex justify-center items-center absolute -bottom-6 right-6">
+                  <div className="w-[80px] h-[80px] bg-primary text-white  rounded-full flex justify-center items-center absolute -bottom-6 right-6">
                     {item.icon}
                   </div>
                 </CardHeader>
                 <CardContent className="text-center">
                   <CardTitle className="mb-4">{item.title}</CardTitle>
-                  <CardDescription className="text-lg">
+                  <CardDescription className="text-lg text-start dark:hover:text-black">
                     {item.description}
                   </CardDescription>
                 </CardContent>

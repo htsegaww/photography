@@ -59,7 +59,7 @@ const Hero = () => {
                 initial={{ x: -250 }}
                 animate={{ x: 0 }}
                 transition={{ duration: 1, type: "tween" }}
-                className="h1 uppercase"
+                className="h1 uppercase text-primary"
               >
                 Let&apos;s make magic!
               </motion.h1>

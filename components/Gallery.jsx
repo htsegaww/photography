@@ -7,7 +7,7 @@ const projectData = [
   {
     image: "/gallery/1.png",
     category: "Portraits",
-    name: "Feb 11, 2024",
+    name: "Hannah",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi asperiores unde maiores ullam commodi natus alias iste vero et.",
 
@@ -16,8 +16,8 @@ const projectData = [
   },
   {
     image: "/gallery/2.png",
-    category: "models",
-    name: "Feb 11, 2024",
+    category: "products",
+    name: "Beauty Brand",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi asperiores unde maiores ullam commodi natus alias iste vero et.",
 
@@ -26,9 +26,8 @@ const projectData = [
   },
   {
     image: "/gallery/3.png",
-
-    category: "Places",
-    name: "Feb 11, 2024",
+    category: "Models",
+    name: "Betty",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi asperiores unde maiores ullam commodi natus alias iste vero et.",
 
@@ -39,7 +38,7 @@ const projectData = [
     image: "/gallery/4.png",
 
     category: "Corporate",
-    name: "Feb 11, 2024",
+    name: "Apple watch",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi asperiores unde maiores ullam commodi natus alias iste vero et.",
     link: "/",
@@ -48,8 +47,8 @@ const projectData = [
   {
     image: "/gallery/5.png",
 
-    category: "fashion",
-    name: "Feb 11, 2024",
+    category: "Models",
+    name: "Jasmine",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi asperiores unde maiores ullam commodi natus alias iste vero et.",
 
@@ -60,7 +59,7 @@ const projectData = [
     image: "/gallery/6.png",
 
     category: "places",
-    name: "Feb 11, 2024",
+    name: "USA",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi asperiores unde maiores ullam commodi natus alias iste vero et.",
     link: "/",
@@ -69,8 +68,8 @@ const projectData = [
   {
     image: "/gallery/7.png",
 
-    category: "Corporate",
-    name: "Feb 11, 2024",
+    category: "Fashion",
+    name: "Brain",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi asperiores unde maiores ullam commodi natus alias iste vero et.",
     link: "/",
@@ -80,7 +79,7 @@ const projectData = [
     image: "/gallery/8.png",
 
     category: "fashion",
-    name: "Feb 11, 2024",
+    name: "Mahlet",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi asperiores unde maiores ullam commodi natus alias iste vero et.",
     link: "/",
@@ -88,9 +87,8 @@ const projectData = [
   },
   {
     image: "/gallery/9.png",
-
     category: "models",
-    name: "Feb 11, 2024",
+    name: "Henok",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi asperiores unde maiores ullam commodi natus alias iste vero et.",
     link: "/",
@@ -98,9 +96,8 @@ const projectData = [
   },
   {
     image: "/gallery/10.png",
-
     category: "portraits",
-    name: "Feb 11, 2024",
+    name: "Abraham",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi asperiores unde maiores ullam commodi natus alias iste vero et.",
     link: "/",
@@ -110,7 +107,7 @@ const projectData = [
     image: "/gallery/11.png",
 
     category: "models",
-    name: "Feb 11, 2024",
+    name: "Samuel",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi asperiores unde maiores ullam commodi natus alias iste vero et.",
     link: "/",

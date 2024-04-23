@@ -14,35 +14,35 @@ const reviewsData = [
     name: "Brain",
     job: "Web Developer",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolor error expedita assumenda amet vitae esse molestiae, ea similique alias",
+      "A big thank you to Brain for crafting a platform that simplifies complex tasks. Your attention to detail and user experience expertise shine through in every interaction. Grateful for your hard work!",
   },
   {
     avatar: "/reviews/avatar-2.png",
     name: "Mark Steve",
     job: "App Developer",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolor error expedita assumenda amet vitae esse molestiae, ea similique alias",
+      "Thank you to the Mark for creating such an amazing mobile app! It's beautifully designed and has all the features I need for my daily tasks. You've made my life so much easier!",
   },
   {
     avatar: "/reviews/avatar-3.png",
     name: "Henok",
     job: "App Developer",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolor error expedita assumenda amet vitae esse molestiae, ea similique alias",
+      "Huge thanks to Henok for crafting an app that not only looks great but also works flawlessly. Your talent and creativity have made a positive impact on my productivity. Much appreciated!",
   },
   {
     avatar: "/reviews/avatar-4.png",
     name: "Elizabeth",
     job: "App Developer",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolor error expedita assumenda amet vitae esse molestiae, ea similique alias",
+      "I'm incredibly thankful to Elizabeth for designing a platform that meets all my business needs. Your app's reliability and performance have exceeded my expectations. Thank you for your dedication to excellence!",
   },
   {
     avatar: "/reviews/avatar-5.png",
     name: "Betty",
     job: "App Developer",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolor error expedita assumenda amet vitae esse molestiae, ea similique alias",
+      "Thank you to Betty for creating an app that has become an integral part of my daily life. Your attention to user feedback and continuous improvements are evident in the app's quality. I'm grateful for your hard work and commitment to delivering a top-notch experience!",
   },
 ];
 const Reviews = () => {
@@ -84,14 +84,14 @@ const Reviews = () => {
           spaceBetween={30}
           modules={[Pagination]}
           pagination={{ clickable: true }}
-          className="h-[350px]"
+          className="h-[370px] "
         >
           {reviewsData.map((person, index) => {
             return (
               <SwiperSlide key={index}>
-                <Card className="p-8 min-h-[300px] hover:bg-tertiary duration-700 transition-all">
-                  <CardHeader className="p-0 mb-3">
-                    <div className="flex flex-col items-start gap-x-4">
+                <Card className="p-5 h-full overflow-hidden hover:bg-tertiary cursor-pointer duration-700 transition-all mb-20">
+                  <CardHeader className="p-0 mb-1">
+                    <div className="flex flex-col items-start gap-3">
                       <Image
                         src={person.avatar}
                         width={70}
@@ -101,18 +101,17 @@ const Reviews = () => {
                       {/* name */}
                       <div className="flex flex-col">
                         <CardTitle>{person.name}</CardTitle>
-                        <p>{person.job}</p>
+                        <p className="mt-2">{person.job}</p>
                       </div>
                     </div>
                   </CardHeader>
-                  <CardDescription className="text-lg text-muted-foreground">
+                  <CardDescription className="text-lg text-muted-foreground ">
                     {person.review}
                   </CardDescription>
                 </Card>
               </SwiperSlide>
             );
           })}
-          ...
         </Swiper>
       </div>
     </motion.section>
